@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# TesseractAtlas local state and demo output
+.tesseractatlas/
+.demo_state/
+demo_out/
+*.stitchmap.txt
+*.stitchmap.html
+!demo/*
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+
+# ruff
+.ruff_cache/
+__pycache__/

@@ -1,0 +1,9 @@
+# TesseractAtlas has no third-party runtime dependencies.
+# This file exists so `pip install -r requirements.txt` is a valid, no-op step
+# and so the standard-library-only promise is explicit and enforced in review.
+#
+# Python 3.9+ standard library only: argparse, csv, json, hashlib (scrypt),
+# html, pathlib, os, secrets, tempfile, datetime, re, getpass.
+#
+# The test suite uses unittest from the standard library as well:
+#   python3 -m unittest discover -s tests

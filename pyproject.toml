@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tesseractatlas"
+version = "1.0.0"
+description = "Virtual pattern-folding grid for beadwork: grid import, cell touch-ups, cube-net fold preview, colourway inventory with dye-lot notes and print-friendly stitch maps."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "TesseractAtlas" }]
+keywords = ["beadwork", "beading", "pattern", "cli", "inventory", "print"]
+dependencies = []
+
+[project.scripts]
+tesseract-atlas = "tesseract_atlas:main"
+
+[tool.setuptools]
+py-modules = ["tesseract_atlas"]
