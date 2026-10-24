@@ -1,0 +1,230 @@
+
+$ python3 tesseract_atlas.py --version
+TesseractAtlas 1.0.0
+
+$ python3 tesseract_atlas.py demo --out-dir demo_out
+demo profile created: cenius (u_c1db1651)
+colourways: 4 (4 new), dye lots: 6 (6 new)
+demo pattern created: Spiral Tessellation (p_298d38e7) 16x16
+fold plan created: r4, r8, c8 -> faces ABCDEF
+wrote demo_out/spiral-tessellation.stitchmap.txt (1781 bytes)
+wrote demo_out/spiral-tessellation.stitchmap.html (7959 bytes, 1 band)
+
+state directory: .tesseractatlas
+signed in as: cenius (demo passphrase: cenius)
+look at it with: python3 tesseract_atlas.py show p_298d38e7 --state-dir .tesseractatlas
+fold preview:    python3 tesseract_atlas.py fold preview p_298d38e7 --state-dir .tesseractatlas
+
+$ python3 tesseract_atlas.py status
+signed in as cenius (u_c1db1651)
+profiles on this machine: 1
+sign out with: python3 tesseract_atlas.py logout
+state file: .tesseractatlas/state.json
+
+$ python3 tesseract_atlas.py list
+patterns - 1 for profile cenius (newest first)
+id          name                 size   symbols  updated
+----------  -------------------  -----  -------  ----------------
+p_298d38e7  Spiral Tessellation  16x16  4        2026-10-24 19:29
+
+hints: python3 tesseract_atlas.py open <id>  |  python3 tesseract_atlas.py rename <id> <new name>  |  python3 tesseract_atlas.py delete <id> --confirm "<name>"
+
+$ python3 tesseract_atlas.py open spiral
+pattern p_298d38e7  Spiral Tessellation
+size      16 x 16 (256 cells)
+symbols   4 distinct (A, B, C, D)
+palette   A=Teal  B=Coral  C=Sand  D=Indigo
+created   2026-10-24 19:29
+updated   2026-10-24 19:29
+source    (demo seed)
+fold plan 3 creases (r4, r8, c8) -> faces ABCDEF
+edits     0 kept (last 20)
+exports   2 recorded
+
+show it with:    python3 tesseract_atlas.py show p_298d38e7
+edit a cell:     python3 tesseract_atlas.py edit p_298d38e7 --cell 1,1=A
+fold the net:    python3 tesseract_atlas.py fold preview p_298d38e7
+
+$ python3 tesseract_atlas.py show spiral --rows 16
+pattern p_298d38e7  Spiral Tessellation  16x16  symbols 4  updated 2026-10-24 19:29
+rendering page 1/1 (rows 1-16 of 16)
+
+    1       5        10        15
+----+-------------------------------
+  1|A A A A A A A A A A A A A A A A
+  2|A B B B B B B B B B B B B B B A
+  3|A B C C C C C C C C C C C C B A
+  4|A B C D D D D D D D D D D C B A
+  5|A B C D A A A A A A A A D C B A
+  6|A B C D A B B B B B B A D C B A
+  7|A B C D A B C C C C B A D C B A
+  8|A B C D A B C D D C B A D C B A
+  9|A B C D A B C D D C B A D C B A
+ 10|A B C D A B C C C C B A D C B A
+ 11|A B C D A B B B B B B A D C B A
+ 12|A B C D A A A A A A A A D C B A
+ 13|A B C D D D D D D D D D D C B A
+ 14|A B C C C C C C C C C C C C B A
+ 15|A B B B B B B B B B B B B B B A
+ 16|A A A A A A A A A A A A A A A A
+----+-------------------------------
+
+legend (symbol -> colourway and dye-lot stock)
+  sym  colourway  brand      code     lots                                            stock
+  ---  ---------  ---------  -------  ----------------------------------------------  -----
+  A    Teal       Malabrigo  #2f6f6a  D-118 12 g (slightly dark, batch 22); D-121...  18 g
+  B    Coral      Rowan      #d96a5c  C-204 25 g (class stock, even finish)           25 g
+  C    Sand       Miyuki     #d9c8a5  S-031 40 g (delica, very even); S-033 8 g (...  48 g
+  D    Indigo     Toho       #2b3a67  I-077 0 g (used up on the March cuff)           0 g
+stock warning: 1 symbol has no stock (D)
+
+fold plan: 3 creases (r4, r8, c8) - preview the net with: python3 tesseract_atlas.py fold preview p_298d38e7
+
+$ python3 tesseract_atlas.py show spiral --cell 3,3
+pattern p_298d38e7  Spiral Tessellation  16x16  symbols 4  updated 2026-10-24 19:29
+rendering page 1/1 (rows 1-16 of 16)
+
+    1       5        10        15
+----+-------------------------------
+  1|A A A A A A A A A A A A A A A A
+  2|A B B B B B B B B B B B B B B A
+  3|A B C C C C C C C C C C C C B A
+  4|A B C D D D D D D D D D D C B A
+  5|A B C D A A A A A A A A D C B A
+  6|A B C D A B B B B B B A D C B A
+  7|A B C D A B C C C C B A D C B A
+  8|A B C D A B C D D C B A D C B A
+  9|A B C D A B C D D C B A D C B A
+ 10|A B C D A B C C C C B A D C B A
+ 11|A B C D A B B B B B B A D C B A
+ 12|A B C D A A A A A A A A D C B A
+ 13|A B C D D D D D D D D D D C B A
+ 14|A B C C C C C C C C C C C C B A
+ 15|A B B B B B B B B B B B B B B A
+ 16|A A A A A A A A A A A A A A A A
+----+-------------------------------
+
+legend (symbol -> colourway and dye-lot stock)
+  sym  colourway  brand      code     lots                                            stock
+  ---  ---------  ---------  -------  ----------------------------------------------  -----
+  A    Teal       Malabrigo  #2f6f6a  D-118 12 g (slightly dark, batch 22); D-121...  18 g
+  B    Coral      Rowan      #d96a5c  C-204 25 g (class stock, even finish)           25 g
+  C    Sand       Miyuki     #d9c8a5  S-031 40 g (delica, very even); S-033 8 g (...  48 g
+  D    Indigo     Toho       #2b3a67  I-077 0 g (used up on the March cuff)           0 g
+stock warning: 1 symbol has no stock (D)
+
+cell 3,3: symbol C -> Sand (Miyuki #d9c8a5)
+  lot S-031: 40 g acquired 2026-07-20 note "delica, very even"
+  lot S-033: 8 g acquired 2026-10-01 note "greener in daylight"
+
+fold plan: 3 creases (r4, r8, c8) - preview the net with: python3 tesseract_atlas.py fold preview p_298d38e7
+
+$ python3 tesseract_atlas.py edit spiral --cell 1,1=K --add-symbol K=Ochre
+symbol K added to the palette -> Ochre
+1,1: A -> K
+saved 1 change to 'Spiral Tessellation' (updated 2026-10-24 19:29)
+
+rows 1-2 now
+    1       5        10        15
+----+-------------------------------
+  1|K A A A A A A A A A A A A A A A
+  2|A B B B B B B B B B B B B B B A
+----+-------------------------------
+
+$ python3 tesseract_atlas.py edit spiral --cell 1,1=Z --add-symbol Z=Ochre --dry-run
+1,1: K -> Z
+dry run: nothing was written; pattern unchanged (updated 2026-10-24 19:29)
+
+$ python3 tesseract_atlas.py edit spiral --undo
+reverted edit e_04ad0b (cell 1,1 to K): 1 cell restored
+1,1: K -> A
+
+rows 1-2 now
+    1       5        10        15
+----+-------------------------------
+  1|A A A A A A A A A A A A A A A A
+  2|A B B B B B B B B B B B B B B A
+----+-------------------------------
+
+$ python3 tesseract_atlas.py fold preview spiral
+fold plan f_d52ad80e for pattern p_298d38e7  Spiral Tessellation  16x16
+creases: r4, r8, c8
+faces: 6 (max 6)
+
+  face  rows  columns  cells
+  ----  ----  -------  -----
+  A     1-4   1-8      32
+  B     1-4   9-16     32
+  C     5-8   1-8      32
+  D     5-8   9-16     32
+  E     9-16  1-8      64
+  F     9-16  9-16     64
+
+isometric net preview (faces stack left to right, three per row)
+    +--------------------+      +--------------------+      +--------------------+
+   /A  rows 1-4         /|     /B  rows 1-4         /|     /C  rows 5-8         /|
+  +--------------------+ |    +--------------------+ |    +--------------------+ |
+  | cols 1-8             | +  | cols 9-16            | +  | cols 1-8             | +
+  | 32 cells             |/   | 32 cells             |/   | 32 cells             |/
+  +--------------------+      +--------------------+      +--------------------+
+    +--------------------+      +--------------------+      +--------------------+
+   /D  rows 5-8         /|     /E  rows 9-16        /|     /F  rows 9-16        /|
+  +--------------------+ |    +--------------------+ |    +--------------------+ |
+  | cols 9-16            | +  | cols 1-8             | +  | cols 9-16            | +
+  | 32 cells             |/   | 64 cells             |/   | 64 cells             |/
+  +--------------------+      +--------------------+      +--------------------+
+
+$ python3 tesseract_atlas.py colors list
+colourway inventory - 4 colourways, 6 dye lots
+
+1. Coral  -  Rowan  -  #d96a5c
+   lots 1   stock 25 g
+   lot    qty   acquired    note
+   -----  ----  ----------  ------------------------
+   C-204  25 g  2026-08-11  class stock, even finish
+   used by: Spiral Tessellation
+
+2. Indigo  -  Toho  -  #2b3a67
+   lots 1   stock 0 g
+   lot    qty  acquired    note
+   -----  ---  ----------  -------------------------
+   I-077  0 g  2026-06-05  used up on the March cuff
+   used by: Spiral Tessellation
+
+3. Sand  -  Miyuki  -  #d9c8a5
+   lots 2   stock 48 g
+   lot    qty   acquired    note
+   -----  ----  ----------  -------------------
+   S-031  40 g  2026-07-20  delica, very even
+   S-033  8 g   2026-10-01  greener in daylight
+   used by: Spiral Tessellation
+
+4. Teal  -  Malabrigo  -  #2f6f6a
+   lots 2   stock 18 g
+   lot    qty   acquired    note
+   -----  ----  ----------  ------------------------
+   D-118  12 g  2026-09-02  slightly dark, batch 22
+   D-121  6 g   2026-10-15  matches the first sleeve
+   used by: Spiral Tessellation
+
+$ python3 tesseract_atlas.py export txt spiral --out-dir demo_out --force
+writing demo_out/spiral-tessellation.stitchmap.txt...
+wrote demo_out/spiral-tessellation.stitchmap.txt (1781 bytes)
+exports recorded for this pattern:
+  html demo_out/spiral-tessellation.stitchmap.html  7959 bytes, 1 band
+  txt  demo_out/spiral-tessellation.stitchmap.txt  1781 bytes
+
+$ python3 tesseract_atlas.py export html spiral --out-dir demo_out --force
+writing demo_out/spiral-tessellation.stitchmap.html...
+wrote demo_out/spiral-tessellation.stitchmap.html (7959 bytes, 1 band)
+the HTML is print-ready: A4, black on white, one labelled table per column band
+exports recorded for this pattern:
+  html demo_out/spiral-tessellation.stitchmap.html  7959 bytes, 1 band
+  txt  demo_out/spiral-tessellation.stitchmap.txt  1781 bytes
+
+$ python3 tesseract_atlas.py export list spiral
+exports for p_298d38e7 'Spiral Tessellation'
+  html demo_out/spiral-tessellation.stitchmap.html  7959 bytes, 1 band  2026-10-24 19:29
+  txt  demo_out/spiral-tessellation.stitchmap.txt  1781 bytes  2026-10-24 19:29
+
+demo complete. state: .tesseractatlas/   print files: demo_out/

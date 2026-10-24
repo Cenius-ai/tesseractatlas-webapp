@@ -1,0 +1,10 @@
+# TesseractAtlas sample grid -- 4 x 4 beadwork tile
+# Legend lines start with '#' and map one symbol to one colourway name.
+# A = Teal
+# B = Coral
+# C = Sand
+# D = Indigo
+A,B,C,D
+B,C,D,A
+C,D,A,B
+D,A,B,C
