@@ -40,7 +40,7 @@ See [`INSTALL.md`](INSTALL.md) for full setup and usage instructions.
 
 ## Architecture
 
-Everything runs out of the box: a Full-stack app codebase (22 files). `./install.sh` gets you from a fresh clone to a running instance with sample data in a single step. Top-level layout: `demo/`, `examples/`, `tests/`. Installation walkthrough: [`INSTALL.md`](INSTALL.md).
+Everything runs out of the box: a Full-stack app codebase (14 files). `./install.sh` gets you from a fresh clone to a running instance with sample data in a single step. Top-level layout: `demo/`, `examples/`, `tests/`. Installation walkthrough: [`INSTALL.md`](INSTALL.md).
 
 ## Usage guide
 
